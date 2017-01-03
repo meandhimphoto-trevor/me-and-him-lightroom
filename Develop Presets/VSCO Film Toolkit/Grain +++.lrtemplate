@@ -1,0 +1,14 @@
+s = {
+	id = "9038C451-2D90-42C4-9512-8CD7FA05A575",
+	internalName = "Grain (Hard)",
+	title = "Grain +++",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 80,
+		},
+		uuid = "7F0357A1-37F2-414A-BCD7-E439380E37ED",
+	},
+	version = 0,
+}

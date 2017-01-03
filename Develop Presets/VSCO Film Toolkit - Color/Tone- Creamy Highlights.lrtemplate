@@ -1,0 +1,19 @@
+s = {
+	id = "E6B56056-8C78-4100-AE81-8A1CDE6221CC",
+	internalName = "Toning: Creamy Highlights",
+	title = "Tone: Creamy Highlights",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableSplitToning = true,
+			ProcessVersion = "6.7",
+			SplitToningBalance = -50,
+			SplitToningHighlightHue = 50,
+			SplitToningHighlightSaturation = 15,
+			SplitToningShadowHue = 0,
+			SplitToningShadowSaturation = 0,
+		},
+		uuid = "34613E1D-1F64-47A3-8A46-F6533B029BC2",
+	},
+	version = 0,
+}

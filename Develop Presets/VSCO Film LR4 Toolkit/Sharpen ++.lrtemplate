@@ -1,0 +1,18 @@
+s = {
+	id = "BB31167A-7991-4C69-80B7-ADB7A1326092",
+	internalName = "Sharpening +++",
+	title = "Sharpen ++",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableDetail = true,
+			ProcessVersion = "6.7",
+			SharpenDetail = 40,
+			SharpenEdgeMasking = 30,
+			SharpenRadius = 1.5,
+			Sharpness = 60,
+		},
+		uuid = "850490C2-A44D-4BE3-9E58-9D2AE9892F1A",
+	},
+	version = 0,
+}

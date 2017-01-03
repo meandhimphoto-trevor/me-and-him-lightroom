@@ -1,0 +1,19 @@
+s = {
+	id = "B5D4AF1A-8B12-48C6-8A2C-28B276E0B4E9",
+	internalName = "Faded - Kodak 2",
+	title = "Tone: Kodak 2",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableSplitToning = true,
+			ProcessVersion = "6.7",
+			SplitToningBalance = 0,
+			SplitToningHighlightHue = 200,
+			SplitToningHighlightSaturation = 25,
+			SplitToningShadowHue = 25,
+			SplitToningShadowSaturation = 25,
+		},
+		uuid = "8387DDDD-16B9-47F4-8012-5F142F789112",
+	},
+	version = 0,
+}

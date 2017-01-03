@@ -1,0 +1,17 @@
+s = {
+	id = "1E181902-7BAD-434A-BBA3-01A4C3E4C696",
+	internalName = "Heck Yeah / Grain Off 2",
+	title = "Heck Yeah / Grain Off 2",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 0,
+			GrainFrequency = 50,
+			GrainSize = 25,
+			ProcessVersion = "6.7",
+		},
+		uuid = "1D64FADD-4402-4F7B-9AC2-534BE44A3B1B",
+	},
+	version = 0,
+}

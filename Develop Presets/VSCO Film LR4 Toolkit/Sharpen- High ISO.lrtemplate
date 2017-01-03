@@ -1,0 +1,18 @@
+s = {
+	id = "F95C40FA-FC2A-4EFF-808C-7AFA19737B19",
+	internalName = "Sharpening High ISO",
+	title = "Sharpen: High ISO",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableDetail = true,
+			ProcessVersion = "6.7",
+			SharpenDetail = 0,
+			SharpenEdgeMasking = 50,
+			SharpenRadius = 1.5,
+			Sharpness = 50,
+		},
+		uuid = "B0363D9C-6BB3-4DB0-9F7A-16C19B1FE5DA",
+	},
+	version = 0,
+}

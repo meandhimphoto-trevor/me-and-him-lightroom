@@ -1,0 +1,20 @@
+s = {
+	id = "24381D4A-12D0-4518-A7C2-EE230C80A284",
+	internalName = "Faded + v2",
+	title = "Fade +",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+			ToneCurveName2012 = "Faded +",
+			ToneCurvePV2012 = {
+				0,
+				10,
+				255,
+				247,
+			},
+		},
+		uuid = "A815A282-106C-45ED-BE7D-BDAABFC2001C",
+	},
+	version = 0,
+}

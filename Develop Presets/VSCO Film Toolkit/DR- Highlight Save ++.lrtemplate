@@ -1,0 +1,14 @@
+s = {
+	id = "E62A0713-404B-4BE7-A0D9-ACA9CEC36144",
+	internalName = "DR: Highlight Save ++",
+	title = "DR: Highlight Save ++",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -90,
+			ProcessVersion = "6.7",
+		},
+		uuid = "FC3BA4D9-4055-4FD2-AD61-B0838FC1A0C7",
+	},
+	version = 0,
+}

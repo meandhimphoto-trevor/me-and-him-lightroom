@@ -1,0 +1,19 @@
+s = {
+	id = "B9F78598-D98B-4763-8A3A-6FFB80B3EF2A",
+	internalName = "Faded - Kodak",
+	title = "Tone: Kodak",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableSplitToning = true,
+			ProcessVersion = "6.7",
+			SplitToningBalance = 80,
+			SplitToningHighlightHue = 75,
+			SplitToningHighlightSaturation = 0,
+			SplitToningShadowHue = 215,
+			SplitToningShadowSaturation = 35,
+		},
+		uuid = "1ACE91F4-E80A-410C-A2C8-D09C9F43F4A8",
+	},
+	version = 0,
+}

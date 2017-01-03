@@ -1,0 +1,14 @@
+s = {
+	id = "04EF87FD-8BEB-4A35-811E-F5DC7D74F413",
+	internalName = "Grain (None)",
+	title = "Grain (None)",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 0,
+		},
+		uuid = "5DEF90AB-8731-449E-B282-4A3F40F5573A",
+	},
+	version = 0,
+}

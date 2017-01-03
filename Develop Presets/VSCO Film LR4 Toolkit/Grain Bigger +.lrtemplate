@@ -1,0 +1,14 @@
+s = {
+	id = "45B470EC-3C09-4BEE-BD14-9C5E0DAF5790",
+	internalName = "Grain Bigger For Web +",
+	title = "Grain Bigger +",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainSize = 75,
+		},
+		uuid = "6CEE47B8-2E22-4503-A882-59CB584DCFDF",
+	},
+	version = 0,
+}

@@ -1,0 +1,15 @@
+s = {
+	id = "929EEE42-A43A-4583-9A13-569C9D9DC629",
+	internalName = "20a. Vignette (Hard)",
+	title = "Vignette +++",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			VignetteAmount = -83,
+			VignetteMidpoint = 13,
+		},
+		uuid = "B12FBE91-C68D-4CC5-A190-6289B95F0E70",
+	},
+	version = 0,
+}

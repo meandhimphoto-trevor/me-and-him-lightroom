@@ -1,0 +1,25 @@
+s = {
+	id = "4E46FDF2-693B-40CA-ADA9-B88F40993B5F",
+	internalName = "Faded +++ v2",
+	title = "Fade +++",
+	type = "Develop",
+	value = {
+		settings = {
+			ToneCurveName2012 = "Faded +++",
+			ToneCurvePV2012 = {
+				0,
+				35,
+				59,
+				72,
+				127,
+				128,
+				192,
+				181,
+				255,
+				222,
+			},
+		},
+		uuid = "F775586D-F766-45EC-B371-D2E602022949",
+	},
+	version = 0,
+}

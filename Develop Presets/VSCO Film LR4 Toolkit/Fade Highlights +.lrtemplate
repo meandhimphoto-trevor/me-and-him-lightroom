@@ -1,0 +1,21 @@
+s = {
+	id = "489E6D87-A2D7-4844-9F00-BFF9689C3D18",
+	internalName = "Faded Highlights +",
+	title = "Fade Highlights +",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+			ToneCurvePV2012 = {
+				0,
+				0,
+				140,
+				134,
+				255,
+				226,
+			},
+		},
+		uuid = "85AD8218-122F-48E9-B303-F38D8CA21881",
+	},
+	version = 0,
+}

@@ -1,0 +1,19 @@
+s = {
+	id = "C9876779-2ED0-49D2-90E6-29A08360D300",
+	internalName = "DR: Highlights Squash +",
+	title = "DR: Highs Squash +",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -90,
+			ParametricHighlightSplit = 75,
+			ParametricHighlights = -40,
+			ParametricLights = -10,
+			ParametricMidtoneSplit = 50,
+			ProcessVersion = "6.7",
+			Whites2012 = -30,
+		},
+		uuid = "766811E9-68BF-4D9F-A133-C375899FB641",
+	},
+	version = 0,
+}

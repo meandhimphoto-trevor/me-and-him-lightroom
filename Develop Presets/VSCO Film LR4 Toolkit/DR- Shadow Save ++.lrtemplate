@@ -1,0 +1,14 @@
+s = {
+	id = "A2F06249-ED35-41E9-9A84-B5F2283B9A2B",
+	internalName = "DR: Shadow Save ++",
+	title = "DR: Shadow Save ++",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+			Shadows2012 = 70,
+		},
+		uuid = "87A35B75-D070-4937-A962-38A2BE6FF673",
+	},
+	version = 0,
+}

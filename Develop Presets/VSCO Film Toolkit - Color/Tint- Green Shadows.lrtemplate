@@ -1,0 +1,14 @@
+s = {
+	id = "CE914DEE-19A1-44AE-B229-D25F9E433CC7",
+	internalName = "Tint: Green Shadows",
+	title = "Tint: Green Shadows",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+			ShadowTint = -5,
+		},
+		uuid = "31DC79AE-27E5-4555-8B0D-E399AADC5071",
+	},
+	version = 0,
+}

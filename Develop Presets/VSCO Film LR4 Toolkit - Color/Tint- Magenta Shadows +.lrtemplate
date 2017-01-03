@@ -1,0 +1,14 @@
+s = {
+	id = "748936C5-82FA-49A3-927C-0EF602AB79DB",
+	internalName = "Tint: Green Shadow Fix +",
+	title = "Tint: Magenta Shadows +",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+			ShadowTint = 15,
+		},
+		uuid = "F305CE4C-00E2-4534-8D3A-39045797F871",
+	},
+	version = 0,
+}

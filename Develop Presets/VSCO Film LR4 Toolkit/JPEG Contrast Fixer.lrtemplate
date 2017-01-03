@@ -1,0 +1,14 @@
+s = {
+	id = "E2DEC336-9551-468F-93BD-08BB8C59D8ED",
+	internalName = "JPEG Contrast Fixer",
+	title = "JPEG Contrast Fixer",
+	type = "Develop",
+	value = {
+		settings = {
+			Contrast2012 = -25,
+			ProcessVersion = "6.7",
+		},
+		uuid = "72143A52-E964-4EAD-B1ED-0E17B5152AF4",
+	},
+	version = 0,
+}

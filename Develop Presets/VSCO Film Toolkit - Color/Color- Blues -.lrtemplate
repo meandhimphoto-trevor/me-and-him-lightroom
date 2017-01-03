@@ -1,0 +1,18 @@
+s = {
+	id = "55A2C9C9-FACB-4B76-941C-4DBBB38B5A45",
+	internalName = "Richer Blues -",
+	title = "Color: Blues -",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = false,
+			EnableColorAdjustments = true,
+			LuminanceAdjustmentAqua = -5,
+			LuminanceAdjustmentBlue = -15,
+			SaturationAdjustmentAqua = 5,
+			SaturationAdjustmentBlue = 15,
+		},
+		uuid = "33AD8DC5-F286-4491-9351-14EE805E0DED",
+	},
+	version = 0,
+}

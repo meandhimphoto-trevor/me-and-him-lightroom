@@ -1,0 +1,16 @@
+s = {
+	id = "8008B57E-BF2C-4950-8732-6A5D415E1769",
+	internalName = "29b. Orange Skin Fixer ++",
+	title = "Color: Orange Skin Fix +",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = false,
+			EnableColorAdjustments = true,
+			SaturationAdjustmentOrange = -22,
+			SaturationAdjustmentRed = -12,
+		},
+		uuid = "6C163B9D-2AB1-425A-8CA7-09CE08ECC103",
+	},
+	version = 0,
+}

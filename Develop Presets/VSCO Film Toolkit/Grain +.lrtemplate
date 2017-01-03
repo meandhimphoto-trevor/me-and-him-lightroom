@@ -1,0 +1,14 @@
+s = {
+	id = "250B31F7-486C-462C-A438-491AFBB294D9",
+	internalName = "Grain (Mild)",
+	title = "Grain +",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 20,
+		},
+		uuid = "BAC13297-C10E-4A49-AD11-5C1A72562C5F",
+	},
+	version = 0,
+}

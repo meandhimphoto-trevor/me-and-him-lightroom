@@ -1,0 +1,19 @@
+s = {
+	id = "0E53CA43-76FD-4A69-859B-E4AD2D0A2308",
+	internalName = "Faded - Fuji",
+	title = "Tone: Fuji",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableSplitToning = true,
+			ProcessVersion = "6.7",
+			SplitToningBalance = 0,
+			SplitToningHighlightHue = 250,
+			SplitToningHighlightSaturation = 6,
+			SplitToningShadowHue = 65,
+			SplitToningShadowSaturation = 21,
+		},
+		uuid = "700500C3-3E39-48B1-AEC3-9C2F2474F27B",
+	},
+	version = 0,
+}

@@ -1,0 +1,22 @@
+s = {
+	id = "D1BF3DBB-1C04-4F0D-960E-098E213018E7",
+	internalName = "Faded Shadows v2",
+	title = "Fade Shadows",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+			ToneCurveName2012 = "Faded Shadows",
+			ToneCurvePV2012 = {
+				0,
+				16,
+				83,
+				88,
+				255,
+				254,
+			},
+		},
+		uuid = "6CC95DA8-B07A-4686-8CDB-15E53AD03155",
+	},
+	version = 0,
+}

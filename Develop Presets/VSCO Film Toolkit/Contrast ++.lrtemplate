@@ -1,0 +1,20 @@
+s = {
+	id = "86BBE622-AA4D-4457-BC49-8936457FE8D3",
+	internalName = "Contrast ++ LR4",
+	title = "Contrast ++",
+	type = "Develop",
+	value = {
+		settings = {
+			ParametricDarks = -20,
+			ParametricHighlightSplit = 75,
+			ParametricHighlights = 5,
+			ParametricLights = 20,
+			ParametricMidtoneSplit = 50,
+			ParametricShadowSplit = 25,
+			ParametricShadows = -10,
+			ProcessVersion = "6.7",
+		},
+		uuid = "903B2B60-19A2-4225-A80D-C5E35E9AA163",
+	},
+	version = 0,
+}

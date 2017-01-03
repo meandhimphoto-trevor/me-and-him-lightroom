@@ -1,0 +1,15 @@
+s = {
+	id = "F6FBAD7C-B9A8-4E27-A019-125784E04542",
+	internalName = "Saturation + LR4",
+	title = "Color: Saturation +",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = false,
+			ProcessVersion = "6.7",
+			Saturation = 10,
+		},
+		uuid = "C97C3BB4-101C-4FEB-96ED-AF599653BC05",
+	},
+	version = 0,
+}

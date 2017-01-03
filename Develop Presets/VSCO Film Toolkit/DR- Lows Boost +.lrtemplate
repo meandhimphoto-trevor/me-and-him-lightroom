@@ -1,0 +1,19 @@
+s = {
+	id = "C0D855D7-9427-406F-9251-78502714363F",
+	internalName = "DR Shadows Boost +",
+	title = "DR: Lows Boost +",
+	type = "Develop",
+	value = {
+		settings = {
+			Blacks2012 = 30,
+			ParametricDarks = 30,
+			ParametricMidtoneSplit = 45,
+			ParametricShadowSplit = 21,
+			ParametricShadows = 15,
+			ProcessVersion = "6.7",
+			Shadows2012 = 50,
+		},
+		uuid = "07E300A8-9239-41C9-8F06-D118DABBF48B",
+	},
+	version = 0,
+}

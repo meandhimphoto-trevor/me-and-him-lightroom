@@ -1,0 +1,15 @@
+s = {
+	id = "C5030F7F-4038-41C1-A047-F4CDF516B807",
+	internalName = "Saturation 0",
+	title = "Color: Saturation 0",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = false,
+			ProcessVersion = "6.7",
+			Saturation = 0,
+		},
+		uuid = "5131B74B-0130-4FBD-A986-C03883F03B3F",
+	},
+	version = 0,
+}

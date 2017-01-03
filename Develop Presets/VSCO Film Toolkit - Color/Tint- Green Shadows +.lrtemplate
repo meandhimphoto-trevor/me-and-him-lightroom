@@ -1,0 +1,16 @@
+s = {
+	id = "CE914DEE-19A1-44AE-B229-D25F9E433CC7",
+	internalName = "Tint: Green Shadows +",
+	title = "Tint: Green Shadows +",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableCalibration = true,
+			GreenSaturation = 0,
+			ProcessVersion = "6.7",
+			ShadowTint = -10,
+		},
+		uuid = "F8359B86-B20D-489A-B3A9-AD2D54FCFE2B",
+	},
+	version = 0,
+}

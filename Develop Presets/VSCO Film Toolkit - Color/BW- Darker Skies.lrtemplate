@@ -1,0 +1,16 @@
+s = {
+	id = "AAB860D5-86E2-48C3-9209-6F6F49C84ECA",
+	internalName = "[BW] Darker Skies",
+	title = "BW: Darker Skies",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = true,
+			EnableGrayscaleMix = true,
+			GrayMixerAqua = 0,
+			GrayMixerBlue = -20,
+		},
+		uuid = "13D7061A-0091-4E4B-AE6C-F43C27CAAA43",
+	},
+	version = 0,
+}

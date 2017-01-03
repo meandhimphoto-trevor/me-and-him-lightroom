@@ -1,0 +1,17 @@
+s = {
+	id = "6668C43E-A017-468B-A63E-3AEAAC39B775",
+	internalName = "29k. Greener Greens ++",
+	title = "Color: Greener Greens ++",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = false,
+			EnableColorAdjustments = true,
+			HueAdjustmentGreen = 30,
+			HueAdjustmentYellow = 20,
+			
+		},
+		uuid = "7EE1F73C-F35B-4958-9ED7-69C20FBB5337",
+	},
+	version = 0,
+}

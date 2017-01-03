@@ -1,0 +1,16 @@
+s = {
+	id = "6AA2A217-39E3-4612-9CC1-0CED167F501E",
+	internalName = "Heck Yeah / Add Grain Hard 3",
+	title = "Heck Yeah / Add Grain Hard 3",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 51,
+			GrainFrequency = 50,
+			GrainSize = 25,
+		},
+		uuid = "7F90D961-F70B-487B-94FE-6093904F0BA1",
+	},
+	version = 0,
+}
