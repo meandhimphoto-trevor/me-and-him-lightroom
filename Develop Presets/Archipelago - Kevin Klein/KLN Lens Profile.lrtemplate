@@ -1,0 +1,26 @@
+s = {
+	id = "4994A4C1-35D4-466A-AF10-C870413CD341",
+	internalName = "Kevin Klein Lens Profile",
+	title = "KLN Lens Profile",
+	type = "Develop",
+	value = {
+		settings = {
+			AutoLateralCA = 0,
+			ChromaticAberrationB = 0,
+			ChromaticAberrationR = 0,
+			Defringe = 0,
+			DefringeGreenAmount = 0,
+			DefringeGreenHueHi = 60,
+			DefringeGreenHueLo = 40,
+			DefringePurpleAmount = 5,
+			DefringePurpleHueHi = 70,
+			DefringePurpleHueLo = 30,
+			EnableLensCorrections = true,
+			LensProfileEnable = 1,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "6.7",
+		},
+		uuid = "E3D91A39-B766-40B9-8DB0-499946AD8281",
+	},
+	version = 0,
+}

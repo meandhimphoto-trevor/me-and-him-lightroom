@@ -1,0 +1,17 @@
+s = {
+	id = "DB7D09CA-38B5-4F85-9EFE-720937B49CCA",
+	internalName = "Kevin Klein Grain 01",
+	title = "KLN Grain 01",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 46,
+			GrainFrequency = 48,
+			GrainSize = 31,
+			ProcessVersion = "6.7",
+		},
+		uuid = "853A5600-EE1D-4CFE-86E7-3FD18D07D52E",
+	},
+	version = 0,
+}

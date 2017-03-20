@@ -1,0 +1,17 @@
+s = {
+	id = "EE457EBA-88D9-4B6D-9518-05D139DCE65C",
+	internalName = "LOAF GRAIN - MID",
+	title = "LOAF GRAIN - MID",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 35,
+			GrainFrequency = 75,
+			GrainSize = 25,
+			ProcessVersion = "6.7",
+		},
+		uuid = "AE4A28AD-D0C1-4AF5-A41E-81DECE5767F8",
+	},
+	version = 0,
+}

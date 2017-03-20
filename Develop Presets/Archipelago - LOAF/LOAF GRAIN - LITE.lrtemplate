@@ -1,0 +1,17 @@
+s = {
+	id = "DC7D9368-9F1B-44B1-99B8-EAED67444E45",
+	internalName = "LOAF GRAIN - LITE",
+	title = "LOAF GRAIN - LITE",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 25,
+			GrainFrequency = 85,
+			GrainSize = 20,
+			ProcessVersion = "6.7",
+		},
+		uuid = "226D320B-4562-4120-9247-BAB48A1FD9A5",
+	},
+	version = 0,
+}
