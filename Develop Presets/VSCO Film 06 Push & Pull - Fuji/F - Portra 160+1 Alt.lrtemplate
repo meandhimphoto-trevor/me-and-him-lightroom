@@ -1,14 +1,14 @@
 s = {
-	id = "4E0ADB4C-61AF-4C8F-855B-3C37F22D712D",
-	internalName = "C - Portra 160⁺¹ Alt",
-	title = "C - Portra 160⁺¹ Alt",
+	id = "4BDE5CC4-E40F-4629-9C32-C1A73E66ACD1",
+	internalName = "F - Portra 160⁺¹ Alt",
+	title = "F - Portra 160⁺¹ Alt",
 	type = "Develop",
 	value = {
 		settings = {
 			Blacks2012 = 25,
 			BlueHue = -20,
 			BlueSaturation = 5,
-			CameraProfile = "Portra 160⁺¹ - C",
+			CameraProfile = "Portra 160⁺¹ - F",
 			Clarity2012 = 0,
 			Contrast2012 = 0,
 			ConvertToGrayscale = false,
@@ -127,7 +127,7 @@ s = {
 			Vibrance = 0,
 			Whites2012 = -40,
 		},
-		uuid = "38BB3F68-E89F-4B8E-AA76-8E4B04AD66A1",
+		uuid = "FBF81089-6CA3-4D5C-92D6-3E8EDE0CCBCA",
 	},
 	version = 0,
 }
