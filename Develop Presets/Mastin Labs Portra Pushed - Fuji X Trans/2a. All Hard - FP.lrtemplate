@@ -1,0 +1,16 @@
+s = {
+	id = "498181EC-FFA9-450B-8472-1BB70BA67F2F",
+	internalName = "2a. All Hard - FP",
+	title = "2a. All Hard - FP",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -25,
+			ProcessVersion = "6.7",
+			Shadows2012 = 20,
+			Whites2012 = -30,
+		},
+		uuid = "42A64DD9-71A0-4DD7-8DD7-CD15C153A465",
+	},
+	version = 0,
+}

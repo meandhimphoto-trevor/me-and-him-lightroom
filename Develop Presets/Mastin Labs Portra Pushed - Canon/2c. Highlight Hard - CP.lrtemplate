@@ -1,0 +1,16 @@
+s = {
+	id = "D0087424-A535-4077-AB93-10B85BD2CB05",
+	internalName = "2c. Highlight Hard - CP",
+	title = "2c. Highlight Hard - CP",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -25,
+			ProcessVersion = "6.7",
+			Shadows2012 = 34,
+			Whites2012 = -30,
+		},
+		uuid = "2ECC722A-2FD4-480D-86C3-859734C78112",
+	},
+	version = 0,
+}

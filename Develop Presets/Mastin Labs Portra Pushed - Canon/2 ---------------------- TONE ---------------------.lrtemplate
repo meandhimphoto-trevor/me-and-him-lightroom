@@ -1,0 +1,13 @@
+s = {
+	id = "032DEAA9-B086-4C2E-A092-D9B05D647038",
+	internalName = "2 ---------------------- 🔆 TONE ----------------------",
+	title = "2 ---------------------- TONE ---------------------",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "6.7",
+		},
+		uuid = "A63B4E74-6BEF-4D53-B706-C07D5F56D92D",
+	},
+	version = 0,
+}

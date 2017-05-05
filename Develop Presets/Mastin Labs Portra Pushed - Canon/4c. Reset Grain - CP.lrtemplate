@@ -1,0 +1,17 @@
+s = {
+	id = "03E0B451-221F-47B7-9F4E-0051E1B8955C",
+	internalName = "4c. Reset Grain - CP",
+	title = "4c. Reset Grain - CP",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 0,
+			GrainFrequency = 52,
+			GrainSize = 23,
+			ProcessVersion = "6.7",
+		},
+		uuid = "29D83E10-37BB-4A62-9A41-92201EB857C7",
+	},
+	version = 0,
+}

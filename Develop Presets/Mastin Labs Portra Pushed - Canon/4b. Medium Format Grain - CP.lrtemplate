@@ -1,0 +1,17 @@
+s = {
+	id = "54A40AA6-94B8-4C30-8271-2B4FAA418E6B",
+	internalName = "4b. Medium Format Grain - CP",
+	title = "4b. Medium Format Grain - CP",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 21,
+			GrainFrequency = 55,
+			GrainSize = 23,
+			ProcessVersion = "6.7",
+		},
+		uuid = "29AF4B9B-0059-42C8-BAB1-0E89E12B78F8",
+	},
+	version = 0,
+}

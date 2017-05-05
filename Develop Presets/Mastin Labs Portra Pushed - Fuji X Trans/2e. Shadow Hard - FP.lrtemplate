@@ -1,0 +1,16 @@
+s = {
+	id = "DE569CD0-EF54-4572-A236-7F2B894F1866",
+	internalName = "2e. Shadow Hard - FP",
+	title = "2e. Shadow Hard - FP",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -36,
+			ProcessVersion = "6.7",
+			Shadows2012 = 20,
+			Whites2012 = -40,
+		},
+		uuid = "736C85FD-461F-4937-88BD-8A93438FDC8F",
+	},
+	version = 0,
+}
