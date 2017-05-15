@@ -1,0 +1,17 @@
+s = {
+	id = "DE64D667-1C64-4997-BF31-C20A32265B5A",
+	internalName = "No Grain",
+	title = "No Grain",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 0,
+			GrainFrequency = 46,
+			GrainSize = 29,
+			ProcessVersion = "6.7",
+		},
+		uuid = "AE668B93-850C-47BE-A84C-F622FBA078FE",
+	},
+	version = 0,
+}
