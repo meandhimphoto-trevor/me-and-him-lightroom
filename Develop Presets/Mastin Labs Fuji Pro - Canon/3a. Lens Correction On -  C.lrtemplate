@@ -1,0 +1,16 @@
+s = {
+	id = "7BBCBACC-1423-4B64-B4EB-58197AEED76C",
+	internalName = "3a. Lens Correction On - C",
+	title = "3a. Lens Correction On -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			LensProfileEnable = 1,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "6.7",
+		},
+		uuid = "20F9BBA2-003A-4096-9EAE-C4AA84CCD25C",
+	},
+	version = 0,
+}

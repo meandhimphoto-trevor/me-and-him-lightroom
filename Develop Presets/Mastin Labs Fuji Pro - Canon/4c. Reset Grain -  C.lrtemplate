@@ -1,0 +1,17 @@
+s = {
+	id = "FC0715CF-9068-4098-AF4A-6DE6E96E9FD1",
+	internalName = "10. Reset Grain -  C",
+	title = "4c. Reset Grain -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 0,
+			GrainFrequency = 52,
+			GrainSize = 23,
+			ProcessVersion = "6.7",
+		},
+		uuid = "C9D5A3E8-8971-4062-921E-48E4160DC4DE",
+	},
+	version = 0,
+}

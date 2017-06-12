@@ -1,0 +1,16 @@
+s = {
+	id = "E5B2F6DC-C12F-425C-A409-C601FBB0C7C8",
+	internalName = "4c. Reset Grain - F ",
+	title = "4c. Reset Grain - F ",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			LensProfileEnable = 0,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "6.7",
+		},
+		uuid = "91E24281-8A37-474B-B7F9-E7608205E49D",
+	},
+	version = 0,
+}

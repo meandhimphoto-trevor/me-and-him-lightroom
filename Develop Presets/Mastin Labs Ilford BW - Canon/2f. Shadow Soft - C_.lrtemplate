@@ -1,0 +1,18 @@
+s = {
+	id = "DF1360CC-BDDD-4CDA-8DDC-7FA63152C1B3",
+	internalName = "Shadow Soft",
+	title = "2f. Shadow Soft - C ",
+	type = "Develop",
+	value = {
+		settings = {
+			Blacks2012 = 52,
+			Contrast2012 = 87,
+			Highlights2012 = -33,
+			ProcessVersion = "6.7",
+			Shadows2012 = 54,
+			Whites2012 = 6,
+		},
+		uuid = "C939D97F-DFA5-4448-BDF2-2080E1DD88A3",
+	},
+	version = 0,
+}

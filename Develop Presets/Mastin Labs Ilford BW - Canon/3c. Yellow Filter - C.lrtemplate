@@ -1,0 +1,23 @@
+s = {
+	id = "D203820F-CB06-420E-B26D-6EA29C9BD393",
+	internalName = "Yellow 6 - HP5",
+	title = "3c. Yellow Filter - C",
+	type = "Develop",
+	value = {
+		settings = {
+			ConvertToGrayscale = true,
+			EnableGrayscaleMix = true,
+			GrayMixerAqua = 13,
+			GrayMixerBlue = -12,
+			GrayMixerGreen = -15,
+			GrayMixerMagenta = 9,
+			GrayMixerOrange = 19,
+			GrayMixerPurple = 25,
+			GrayMixerRed = 33,
+			GrayMixerYellow = 73,
+			ProcessVersion = "6.7",
+		},
+		uuid = "F3225F58-7D80-443A-AA65-6BA4A94296E3",
+	},
+	version = 0,
+}

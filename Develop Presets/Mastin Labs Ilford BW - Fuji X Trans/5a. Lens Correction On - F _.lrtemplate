@@ -1,0 +1,16 @@
+s = {
+	id = "57865205-7A35-43F4-A13D-255944373A9E",
+	internalName = "5a. Lens Correction On - F  ",
+	title = "5a. Lens Correction On - F  ",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			LensProfileEnable = 1,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "6.7",
+		},
+		uuid = "951EE057-8835-40B9-AD3C-21A9FFC8761C",
+	},
+	version = 0,
+}

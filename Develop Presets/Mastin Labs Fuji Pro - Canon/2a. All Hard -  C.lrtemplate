@@ -1,0 +1,18 @@
+s = {
+	id = "E11596F5-7A89-4170-A07A-7FFFB8027983",
+	internalName = "2. All Hard -  C",
+	title = "2a. All Hard -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			Blacks2012 = 75,
+			Contrast2012 = 89,
+			Highlights2012 = -25,
+			ProcessVersion = "6.7",
+			Shadows2012 = -20,
+			Whites2012 = -31,
+		},
+		uuid = "51734FF7-9F4D-4DB7-9E15-203EF8848974",
+	},
+	version = 0,
+}

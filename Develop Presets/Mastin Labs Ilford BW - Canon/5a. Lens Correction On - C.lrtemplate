@@ -1,0 +1,16 @@
+s = {
+	id = "4A9C680C-965E-4016-9D29-2388E811BF6F",
+	internalName = "5a. Lens Correction On - C",
+	title = "5a. Lens Correction On - C",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			LensProfileEnable = 1,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "6.7",
+		},
+		uuid = "2A58F47B-E088-42C9-900E-755F51C58330",
+	},
+	version = 0,
+}

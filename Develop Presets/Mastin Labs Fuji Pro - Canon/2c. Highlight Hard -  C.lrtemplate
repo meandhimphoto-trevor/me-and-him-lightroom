@@ -1,0 +1,18 @@
+s = {
+	id = "51A4F212-2968-4FD2-B3D4-15F11983CD5B",
+	internalName = "4. Highlight Hard -  C",
+	title = "2c. Highlight Hard -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			Blacks2012 = 82,
+			Contrast2012 = 89,
+			Highlights2012 = -25,
+			ProcessVersion = "6.7",
+			Shadows2012 = 1,
+			Whites2012 = -31,
+		},
+		uuid = "7B7FD97C-A321-43CD-AC20-0897CC473154",
+	},
+	version = 0,
+}

@@ -1,0 +1,18 @@
+s = {
+	id = "CE4734DE-3D55-478A-96B6-FB4F136EB7E9",
+	internalName = "Cooltone",
+	title = "4b. Cooltone Paper - C",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableSplitToning = true,
+			SplitToningBalance = 0,
+			SplitToningHighlightHue = 226,
+			SplitToningHighlightSaturation = 5,
+			SplitToningShadowHue = 214,
+			SplitToningShadowSaturation = 2,
+		},
+		uuid = "D1E370AB-3E64-444B-B2AD-C92F2C6CFAAA",
+	},
+	version = 0,
+}

@@ -1,0 +1,19 @@
+s = {
+	id = "6FB1858C-C3B9-41ED-85E5-A9D9E09DDC02",
+	internalName = "4c. Neutral Tone Paper",
+	title = "4c. Neutral Paper - C",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableSplitToning = true,
+			ProcessVersion = "6.7",
+			SplitToningBalance = 0,
+			SplitToningHighlightHue = 55,
+			SplitToningHighlightSaturation = 0,
+			SplitToningShadowHue = 53,
+			SplitToningShadowSaturation = 0,
+		},
+		uuid = "E7FCADD9-DAEE-4AC8-87F3-4C0D82F6946D",
+	},
+	version = 0,
+}

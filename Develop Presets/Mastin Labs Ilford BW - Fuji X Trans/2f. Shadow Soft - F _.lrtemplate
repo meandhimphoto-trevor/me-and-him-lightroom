@@ -1,0 +1,17 @@
+s = {
+	id = "0477EDAE-90B8-499B-BC43-48299A36BFD2",
+	internalName = "2f. Shadow Soft - F  ",
+	title = "2f. Shadow Soft - F  ",
+	type = "Develop",
+	value = {
+		settings = {
+			Blacks2012 = 52,
+			Highlights2012 = -33,
+			ProcessVersion = "6.7",
+			Shadows2012 = 54,
+			Whites2012 = 6,
+		},
+		uuid = "3A31E216-F711-42D5-B5C2-DF088E66EB38",
+	},
+	version = 0,
+}

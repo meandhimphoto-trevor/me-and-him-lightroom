@@ -1,0 +1,16 @@
+s = {
+	id = "6A31C133-E27B-40BC-8154-C2C560A89F50",
+	internalName = "3a. Lens Correction On - F ",
+	title = "3a. Lens Correction On - F ",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			LensProfileEnable = 1,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "6.7",
+		},
+		uuid = "1915BC87-3471-4A05-A3E4-83E221D44C83",
+	},
+	version = 0,
+}

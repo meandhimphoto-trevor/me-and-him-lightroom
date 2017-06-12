@@ -1,0 +1,17 @@
+s = {
+	id = "AEF3737E-FD4D-4261-B2B2-58680C075B4B",
+	internalName = "2c. Highlight Hard - F  ",
+	title = "2c. Highlight Hard - F  ",
+	type = "Develop",
+	value = {
+		settings = {
+			Blacks2012 = 52,
+			Highlights2012 = -23,
+			ProcessVersion = "6.7",
+			Shadows2012 = -11,
+			Whites2012 = 14,
+		},
+		uuid = "77550916-5460-408E-B841-BA8E7BAC5F4B",
+	},
+	version = 0,
+}
