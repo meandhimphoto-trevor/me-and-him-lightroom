@@ -1,0 +1,17 @@
+s = {
+	id = "8F4AF882-77DF-4A39-999B-4E7105C77C03",
+	internalName = "-grain 25-60-60",
+	title = "- GRAIN medium",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 20,
+			GrainFrequency = 60,
+			GrainSize = 60,
+			ProcessVersion = "6.7",
+		},
+		uuid = "72DEF410-FAAF-4B46-A8E6-67CD638A2B8E",
+	},
+	version = 0,
+}

@@ -1,0 +1,23 @@
+s = {
+	id = "6FDF9750-5C08-4EFC-A206-E397F0DC7E5F",
+	internalName = "-texture",
+	title = "- TEXTURE",
+	type = "Develop",
+	value = {
+		settings = {
+			Clarity2012 = 20,
+			EnableDetail = true,
+			EnableEffects = true,
+			GrainAmount = 25,
+			GrainFrequency = 60,
+			GrainSize = 60,
+			ProcessVersion = "6.7",
+			SharpenDetail = 25,
+			SharpenEdgeMasking = 50,
+			SharpenRadius = 1,
+			Sharpness = 30,
+		},
+		uuid = "D614F396-9F63-47A4-B111-87C7AB76C24E",
+	},
+	version = 0,
+}
