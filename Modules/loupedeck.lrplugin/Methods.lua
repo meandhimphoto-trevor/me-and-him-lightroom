@@ -13,6 +13,8 @@ local LrShell             = import 'LrShell'
 local LrLogger            = import 'LrLogger'
 local logger              = LrLogger('loupedeckPlugin')
 
+local collectionState
+
 -- Notifications
 require 'Notifications'
 
@@ -22,7 +24,7 @@ OriginDevelopTool = ""
 CurrentPhoto = {
 	photo = nil,
 	fileFormat = "",
-  	view = "develop_loupe"
+	view = "develop_loupe"
 }
 
 -- LR Methods
@@ -30,7 +32,7 @@ METHODS = {
   StepUp          = function(property, value) setProperty(property, value)  end,
   StepDown        = function(property, value) setProperty(property, -value) end,
   Reset           = function(property, value) return doReset(property) end, 
-  Get             = function(property, value) getPropertyInfo(property) end,
+  Get             = function(property, value) PRESETS[property]() end,
   SocketControl   = function(event, value) onHandleSocketControl(event) end,
   Control         = function(controlType,value) CONTROLS[controlType](value) end,
   Increase        = function(property, value) setProperty(property, (BIG_STEP_MULTIPLIER*value)) end,
@@ -43,9 +45,9 @@ CONTROLS = {
   Undo        = function(value) if value == 'All' then return LrDevelopController.resetAllDevelopAdjustments() end LrUndo.undo() end,
   Redo        = function(value) LrUndo.redo() end,
   Zoom        = function(value) LrApplicationView.toggleZoom() end,
-  FullScreen  = function(value) if value == nil or value == "" then return end return runScript(value) end,
+  FullScreen  = function(value) if value == nil then return end if value == "" then return fullScreen() end if value == "t" then return fullscreenPanel() end return runScript(value) end,
   Brush 	    = function() toggleBrushTool() end,
-  Copy        = function() return copySettings() end,
+  Copy        = function(value) return copySettings(value) end,
   Paste       = function(value) return pasteSettings(value) end,
   Pick        = function(value) if value == "0" then return togglePick() else return toggleReject() end end,
   Before      = function(value) return toggleBefore(value) end,
@@ -62,10 +64,17 @@ CONTROLS = {
   Gray        = function() LrDevelopController.revealPanel("GrayMixerRed") end,
   Selection   = function(value) return doPhotoSelection(value) end,
   Script      = function(value) return runScript(value) end,
+  Disabled    = function() showNotification("FEATURE_DISABLED") end,
+  Quick       = function() return quickCollection() end,
 }
 
 RESETS = {
 	straightenAngle = function() toggleCrop() end,
+}
+
+PRESETS = {
+  AllPresets = function() getPresets() end,
+  ExportPresets = function() getExportPresets() end,
 }
 
 NORMAL_STEP 		= 1/200
@@ -94,12 +103,49 @@ MODE_COLORS = "MODE_COLORS"
 RATINGS = {
 	mode = MODE_RATINGS,
   COLORS = {"red", "yellow", "green", "blue", "purple", "none"},
+  LABELS = {"label1", "label2", "label3", "label4", "label5"},
 	MODE_RATINGS = function(rating) return LrSelection.setRating(rating) end,
   MODE_COLORS = function(rating) return LrSelection.setColorLabel(RATINGS["COLORS"][rating]) end
 }
 
+DISABLED_COPY_SETTINGS = {
+  EnablePaintBasedCorrections = false,
+  EnableGradientBasedCorrections = false,
+  EnableCircularGradientBasedCorrections = false,
+  EnableTransform = false,
+  EnableRetouch = false,
+  EnableRedEye = false,
+  PaintBasedCorrections = "nil",
+  CircularGradientBasedCorrections = "nil",
+  GradientBasedCorrections = "nil",
+  RetouchAreas = "nil",
+  RedeyeInfo = "nil",
+  PerspectiveY = "nil",
+  PerspectiveUpright = "nil",
+  PerspectiveAspect = "nil",
+  PerspectiveScale = "nil",
+  PerspectiveX = "nil",
+  PerspectiveRotate = "nil",
+  PerspectiveVertical = "nil",
+  PerspectiveHorizontal = "nil",
+  UprightTransform_0 = "nil",
+  UprightTransform_1 = "nil",
+  UprightTransform_2 = "nil",
+  UprightTransform_3 = "nil",
+  UprightTransform_4 = "nil",
+  UprightTransform_5 = "nil",
+  UprightTransformCount = "nil"
+}
+
+CROP_SETTINGS = { CropRight = "nil", CropLeft = "nil", CropTop = "nil", CropBottom = "nil", CropAngle = "nil" }
+
 -- Property Value Calculations 
 function setProperty( property, modifier )
+
+  if property == "PostCropVignetteAmount" then
+    setVignette()
+  end
+
 	-- body
 	local f = FILETYPE_PROPERTY_VALUE_METHODS[CurrentPhoto.fileformat]
 
@@ -110,6 +156,21 @@ function setProperty( property, modifier )
 	local m = f[prop] or setNormalValue
 
 	return m(prop, modifier)
+end
+
+function setVignette() 
+    local amount = LrDevelopController.getValue("PostCropVignetteAmount")
+    local mid = LrDevelopController.getValue("PostCropVignetteMidpoint")
+    local feat = LrDevelopController.getValue("PostCropVignetteFeather")
+    local round = LrDevelopController.getValue("PostCropVignetteRoundness")
+    local high = LrDevelopController.getValue("PostCropVignetteHighlightContrast")
+
+    if tonumber(amount) == 0 and tonumber(mid) == 50 and tonumber(feat) == 50 and tonumber(round) == 0 and tonumber(high) == 0 then
+      LrDevelopController.setValue("PostCropVignetteMidpoint",33)
+      LrDevelopController.setValue("PostCropVignetteFeather",73)
+      LrDevelopController.setValue("PostCropVignetteRoundness",0)
+      LrDevelopController.setValue("PostCropVignetteHighlightContrast",21)
+    end
 end
 
 function setNormalValue( property, modifier )
@@ -146,7 +207,7 @@ end
 
 function doReset( property )
   
-  prop = (LrDevelopController.getSelectedTool() == "localized" and "local_"..property or property)
+  prop = ((LrDevelopController.getSelectedTool() == "localized" or LrDevelopController.getSelectedTool() == 'gradient' or LrDevelopController.getSelectedTool() == 'circularGradient') and "local_"..property or property)
 
   if(type(RESETS[property])=="function") then 
     RESETS[property]() 
@@ -154,6 +215,15 @@ function doReset( property )
     LrDevelopController.resetToDefault(prop) 
   end
 end
+
+function fullScreen() 
+  runScript("fullscreen")
+end
+
+function fullscreenPanel()
+  setProperty("Tint", 1)
+  setProperty("Tint", -1)
+end 
 
 function toggleCrop( )
 	local currentTool = LrDevelopController.getSelectedTool()
@@ -267,11 +337,23 @@ end
 
 
 -- Copy & Paste
-function copySettings( )
+function copySettings(value)
  
-  if CurrentPhoto.photo == nil then return end
-  CurrentPhoto.settings = CurrentPhoto.photo:getDevelopSettings()
-  return showNotification("COPY")
+  if value == "virtual" then
+    LrTasks.startAsyncTask(function ()
+      LrApplication.activeCatalog():createVirtualCopies()
+    end)
+  else
+    if CurrentPhoto.photo == nil then return end
+    CurrentPhoto.settings = CurrentPhoto.photo:getDevelopSettings()
+    
+    for sKey,sValue in pairs(DISABLED_COPY_SETTINGS) do
+      logger:trace("CURRENTPHOTO: ", sKey, sValue)
+      CurrentPhoto.settings[sKey] = sValue == "nil" and nil or sValue
+    end
+  
+    return showNotification("COPY")
+  end
 end
 
 function pasteSettings(value)
@@ -282,14 +364,26 @@ function pasteSettings(value)
     if value == "All" then
       local photos = LrApplication.activeCatalog():getTargetPhotos()
       for _,photo in pairs(photos) do
+        local settings = CurrentPhoto.photo:getDevelopSettings()
+        local cropSett = keepCrop(settings)
         photo:applyDevelopSettings(CurrentPhoto.settings)
       end
       return showNotification("PASTE")
     end
-      
+
+      local settings = CurrentPhoto.photo:getDevelopSettings()
+      local cropSett = keepCrop(settings)
       CurrentPhoto.photo:applyDevelopSettings(CurrentPhoto.settings)
     return showNotification("PASTE")
   end)
+end
+
+function keepCrop(value)
+  for setting,_ in pairs(CROP_SETTINGS) do
+    if value[setting] ~= 0 then
+      CurrentPhoto.settings[setting] = value[setting]
+    end
+  end
 end
 
 -- Before / After
@@ -478,32 +572,111 @@ function getPresetPath(asTable)
   	end
 end
 
--- Photo Selection
-function doPhotoSelection(value) 
+function getExportPresets()
+  local path = joinUntil(getPresetPath(true), "Lightroom") 
+  path =  LrPathUtils.child(path, "Export Presets")
 
-  -- Override current selection
-  LrApplication.activeCatalog():setSelectedPhotos(LrApplication.activeCatalog():getTargetPhoto(), {})
+  local paths = {}
 
-  local photos = LrApplication.activeCatalog():getMultipleSelectedOrAllPhotos()
-
-  local selectedPhotos = {}
-
-  for _,photo in pairs(photos) do
-    if value == 'Any' or isTaggedWithValue(photo, value) then
-      table.insert(selectedPhotos, photo)
+  for fp in LrFileUtils.recursiveDirectoryEntries(path) do
+    local t = splitExportPresetPath(fp)
+    if string.find(t, ".lrtemplate") ~= nil then
+      logger:trace("PATHS "..t)
+      table.insert(paths, t)
     end
   end
 
-  if #selectedPhotos == 0 then 
-    showNotification("NO_MATCH")
-    return 
+  doExportPresetJson(paths)
+
+end
+
+function doExportPresetJson(paths)
+
+  local folder
+  local presets = {}
+  local fPresets = {}
+  local ePresets = {}
+
+  for _,t in pairs(paths) do
+    local parts = split(t, '[\\/]+')
+
+    if string.find(parts[2], ".lrtemplate") then
+      table.insert(ePresets, {name = parts[2]})
+      if next(paths,_) == nil then
+        table.insert(fPresets, {name = folder, presets = presets})
+        table.insert(fPresets, {name = "Export Presets", presets = ePresets})
+      end
+    else
+      if next(paths,_) == nil then
+        if folder == parts[2] then
+          table.insert(presets, {name = parts[#parts]})
+          table.insert(fPresets, {name = folder, presets = presets})
+        else
+          table.insert(fPresets, {name = folder, presets = presets})
+          presets = {}
+          table.insert(presets, {name = parts[#parts]})
+          table.insert(fPresets, {name = parts[2], presets = presets})
+        end
+   
+        if #ePresets ~= 0 then
+          table.insert(fPresets, {name = "Export Presets", presets = ePresets})
+        end
+      elseif folder == parts[2] or folder == nil then
+        table.insert(presets, {name = parts[#parts]})
+      elseif folder ~= parts[2] and folder ~= nil then
+        table.insert(fPresets, {name = folder, presets = presets})
+        presets = {}
+        table.insert(presets, {name = parts[#parts]})
+      end
+      folder = parts[2]
+    end
   end
 
-  local p = selectedPhotos[#selectedPhotos]
 
-  LrApplication.activeCatalog():setSelectedPhotos(p, selectedPhotos)
+  local resp = JSON:encode( {propertyName = "ExportPresets", items = fPresets} )
 
-  showMatchingImagesNotification(#selectedPhotos)
+  LOUPEDECK.SSOCKET:send(string.format('%s\n', resp))
+end
+
+function splitExportPresetPath(path)
+  local si,_ = string.find(path, "Export Presets")
+  local p = string.sub(path, si, string.len(path))
+
+  return p
+end
+
+-- Photo Selection
+function doPhotoSelection(value) 
+
+  local catalog = LrApplication.activeCatalog() 
+  local filter = catalog:getCurrentViewFilter()
+
+  if RATINGS.mode == MODE_RATINGS then
+    if filter["minRating"] == tonumber(value) then
+      filter["minRating"] = 0
+    else
+      filter["minRating"] = tonumber(value)
+    end
+
+    filter["ratingOp"] = ">="
+  else
+    local label = RATINGS.LABELS[tonumber(value)]
+
+    if filter[label] == true then
+      filter[label] = false
+    else
+      filter[label] = true
+    end
+  end
+
+  filter["filtersActive"] = true
+
+  for a,b in pairs(filter) do
+    logger:trace(a, b)
+  end
+
+  catalog:setViewFilter(filter)
+
 end
 
 function isTaggedWithValue(photo, value)
@@ -547,6 +720,11 @@ function runScript(value)
       LrTasks.execute('wscript '..s)
     end
 
+    if value == "selectAll" then
+      showNotification("SELECTALL")
+    elseif value == "selectNone" then
+      showNotification("DESELECT")
+    end
   end)
   
 end
@@ -555,20 +733,13 @@ end
 function onHandleSocketControl(event)
 end  -- OnHandleSocketControl
 
-function getPropertyInfo(property)
+function getPresets()
 
-    local minRange, maxRange = LrDevelopController.getRange(property)
-    local currentVal = LrDevelopController.getValue(property)
-    local respBody = {currentValue = currentVal, minValue = minRange, maxValue = maxRange}
-
-    if (property == "AllPresets") then 
-      respBody = listPresets()
-    end
-
-    local resp = JSON:encode( {propertyName = property, items = respBody} )
+    local respBody = listPresets()
+    local resp = JSON:encode( {propertyName = "AllPresets", items = respBody} )
      
     LOUPEDECK.SSOCKET:send(string.format('%s\n', resp))
-end -- end getPropertyInfo
+end -- end getPresets
 
 function listPresets()
 
@@ -622,3 +793,34 @@ function clean(s)
   end
   return s:gsub('"','')
 end
+
+function quickCollection()
+  local catalog = LrApplication.activeCatalog()  
+
+  if collectionState == nil then collectionState=catalog.kAllPhotos end
+
+  if isQuickCollectionInArray(catalog:getActiveSources()) == false then
+    collectionState = catalog:getActiveSources()
+    catalog:setActiveSources(catalog.kQuickCollectionIdentifier)
+  else
+    catalog:setActiveSources(collectionState)
+  end
+  
+end
+
+function isQuickCollectionInArray(collection)
+  if type(collection) == "table" then
+    for sKey,sValue in pairs(collection) do
+      if sValue == "quick_collection" then
+        return true
+      end
+    end
+  else
+    if collection == "quick_collection" then
+      return true
+    end
+  end
+
+  return false
+end
+

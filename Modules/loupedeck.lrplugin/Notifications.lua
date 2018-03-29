@@ -7,6 +7,9 @@ NOTIFICATIONS = {
 	COPY		= "Develop settings copied from current photo.",
 	PASTE		= "Develop settings applied to selected photo(s).",
 	NO_MATCH	= "Did not found any matching images.",
+	FEATURE_DISABLED = "This feature requires that the configuration app is running.",
+	DESELECT    = "No photo selected.",
+	SELECTALL   = "Selected all photos.",
 }
 
 function showNotification( notification )
