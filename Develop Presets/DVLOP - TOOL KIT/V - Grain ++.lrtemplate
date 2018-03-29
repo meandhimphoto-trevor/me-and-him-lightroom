@@ -1,0 +1,16 @@
+s = {
+	id = "D96CB975-E052-479E-AE59-2215C729A606",
+	internalName = "GRAIN ++",
+	title = "V - Grain ++",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 20,
+			GrainFrequency = 73,
+			GrainSize = 3,
+		},
+		uuid = "C6BE8DB8-5040-473E-BCE5-26AF5B722D12",
+	},
+	version = 0,
+}
