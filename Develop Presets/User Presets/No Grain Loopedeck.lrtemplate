@@ -1,0 +1,17 @@
+s = {
+	id = "7CA721EC-BDFF-4B51-BCC8-E6949ABB9B5C",
+	internalName = "No Grain Loopedeck",
+	title = "No Grain Loopedeck",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 0,
+			GrainFrequency = 55,
+			GrainSize = 28,
+			ProcessVersion = "6.7",
+		},
+		uuid = "BC2A462E-0532-4CCC-B36F-0574F27AC97D",
+	},
+	version = 0,
+}
