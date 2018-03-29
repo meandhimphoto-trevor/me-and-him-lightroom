@@ -1,0 +1,47 @@
+s = {
+	id = "B27BF805-B84F-49A3-82A7-7EB1FC485C71",
+	internalName = "Kelly's Images",
+	title = "Kelly's Images",
+	type = "LibraryFilter",
+	value = {
+		columnBrowserActive = false,
+		columnBrowserDesc = {
+			{
+				criteria = "dateHierarchy",
+			},
+			{
+				criteria = "camera",
+			},
+			{
+				criteria = "lens",
+			},
+			{
+				criteria = "label",
+			},
+		},
+		customLabel = false,
+		filtersActive = false,
+		gpsLocation = false,
+		gpsLocationNELatitude = "<nil>",
+		gpsLocationNELongitude = "<nil>",
+		gpsLocationSWLatitude = "<nil>",
+		gpsLocationSWLongitude = "<nil>",
+		label1 = false,
+		label2 = false,
+		label3 = false,
+		label4 = false,
+		label5 = false,
+		labelOp = "any",
+		minRating = 0,
+		noLabel = false,
+		pick = "<nil>",
+		ratingOp = ">=",
+		searchOp = "beginsWith",
+		searchString = "K",
+		searchStringActive = true,
+		searchTarget = "filename",
+		usage = "<nil>",
+		whichCopies = "<nil>",
+	},
+	version = 0,
+}

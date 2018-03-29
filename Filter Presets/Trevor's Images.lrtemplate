@@ -1,0 +1,47 @@
+s = {
+	id = "490A7E86-67F0-49C0-8AFF-2FC91D322E54",
+	internalName = "Trevor's Images",
+	title = "Trevor's Images",
+	type = "LibraryFilter",
+	value = {
+		columnBrowserActive = false,
+		columnBrowserDesc = {
+			{
+				criteria = "dateHierarchy",
+			},
+			{
+				criteria = "camera",
+			},
+			{
+				criteria = "lens",
+			},
+			{
+				criteria = "label",
+			},
+		},
+		customLabel = false,
+		filtersActive = false,
+		gpsLocation = false,
+		gpsLocationNELatitude = "<nil>",
+		gpsLocationNELongitude = "<nil>",
+		gpsLocationSWLatitude = "<nil>",
+		gpsLocationSWLongitude = "<nil>",
+		label1 = false,
+		label2 = false,
+		label3 = false,
+		label4 = false,
+		label5 = false,
+		labelOp = "any",
+		minRating = 0,
+		noLabel = false,
+		pick = "<nil>",
+		ratingOp = ">=",
+		searchOp = "beginsWith",
+		searchString = "T",
+		searchStringActive = true,
+		searchTarget = "filename",
+		usage = "<nil>",
+		whichCopies = "<nil>",
+	},
+	version = 0,
+}
