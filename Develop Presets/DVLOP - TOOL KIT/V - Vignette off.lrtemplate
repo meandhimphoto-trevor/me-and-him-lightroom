@@ -1,0 +1,16 @@
+s = {
+	id = "50A84EFB-49CB-4E22-AA60-2C4BD10FBC64",
+	internalName = "Vignette off",
+	title = "V - Vignette off",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			ProcessVersion = "6.7",
+			VignetteAmount = 0,
+			VignetteMidpoint = 5,
+		},
+		uuid = "9F25F47F-C9BC-4621-A83B-1D82995FFE21",
+	},
+	version = 0,
+}
