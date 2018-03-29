@@ -1,0 +1,23 @@
+s = {
+	id = "7A8D29D5-644C-4AB2-A8E4-176014A5F776",
+	internalName = "LEVEL",
+	title = "V - Level",
+	type = "Develop",
+	value = {
+		settings = {
+			CropConstrainToWarp = 1,
+			EnableTransform = true,
+			PerspectiveAspect = 0,
+			PerspectiveHorizontal = 0,
+			PerspectiveRotate = 0,
+			PerspectiveScale = 100,
+			PerspectiveUpright = 3,
+			PerspectiveVertical = 0,
+			PerspectiveX = 0,
+			PerspectiveY = 0,
+			orientation = "AB",
+		},
+		uuid = "A5F5CE93-BFFC-49BD-9C12-DCE21D0CA1D8",
+	},
+	version = 0,
+}
