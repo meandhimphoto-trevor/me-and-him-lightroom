@@ -1,0 +1,16 @@
+s = {
+	id = "40CEB8BC-8B23-4B60-A530-62D864C6D547",
+	internalName = "3b. Lens Correction Off (Reset) -  C",
+	title = "3b. Lens Correction Off (Reset) -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableLensCorrections = true,
+			LensProfileEnable = 0,
+			LensProfileSetup = "Auto",
+			ProcessVersion = "10.0",
+		},
+		uuid = "0A92616C-B6C8-4AA8-8AD9-2524CA260226",
+	},
+	version = 0,
+}

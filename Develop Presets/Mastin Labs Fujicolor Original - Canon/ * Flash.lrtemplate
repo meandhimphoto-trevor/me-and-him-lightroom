@@ -1,0 +1,16 @@
+s = {
+	id = "DA73E418-A44F-4BC5-86A0-4191C9120842",
+	internalName = " 📸 Flash",
+	title = " 📸 Flash",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "10.0",
+			Temperature = 6000,
+			Tint = -2,
+			WhiteBalance = "Custom",
+		},
+		uuid = "4F4E7834-F96B-41C5-9101-C54DCD927721",
+	},
+	version = 0,
+}

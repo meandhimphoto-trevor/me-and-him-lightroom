@@ -1,0 +1,16 @@
+s = {
+	id = "E183021D-E318-4F86-BA36-71BBBB9BC91B",
+	internalName = "2b. All Soft - F ",
+	title = "2b. All Soft - F ",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -90,
+			ProcessVersion = "10.0",
+			Shadows2012 = 40,
+			Whites2012 = -88,
+		},
+		uuid = "95AEE907-4125-449C-9342-60E2A62D9345",
+	},
+	version = 0,
+}

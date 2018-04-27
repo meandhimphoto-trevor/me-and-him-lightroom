@@ -1,0 +1,16 @@
+s = {
+	id = "2E071495-E912-4079-A6CA-B159EE2E20E0",
+	internalName = " 🔦 Cool White/LED",
+	title = " 🔦 Cool White/LED",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "10.0",
+			Temperature = 4000,
+			Tint = -5,
+			WhiteBalance = "Custom",
+		},
+		uuid = "0CBFFD26-5AAC-496D-80C1-D3DFB2796499",
+	},
+	version = 0,
+}

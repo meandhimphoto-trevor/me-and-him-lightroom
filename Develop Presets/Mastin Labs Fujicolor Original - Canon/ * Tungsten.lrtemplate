@@ -1,0 +1,16 @@
+s = {
+	id = "0145EE42-EFE3-4BE2-94DB-320B5EBB4586",
+	internalName = " 💡Tungsten",
+	title = " 💡Tungsten",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "10.0",
+			Temperature = 3000,
+			Tint = -10,
+			WhiteBalance = "Custom",
+		},
+		uuid = "A3A46495-5D65-4C76-A9EE-5B0C42A72451",
+	},
+	version = 0,
+}

@@ -1,0 +1,17 @@
+s = {
+	id = "BB36F284-2FE1-4693-BD00-9AE3ECFF6EBC",
+	internalName = "4b. Medium Format Grain - F ",
+	title = "4b. Medium Format Grain - F ",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 22,
+			GrainFrequency = 55,
+			GrainSize = 37,
+			ProcessVersion = "10.0",
+		},
+		uuid = "3A5F3C7F-1C6A-4CB2-957A-F591386D4F6D",
+	},
+	version = 0,
+}

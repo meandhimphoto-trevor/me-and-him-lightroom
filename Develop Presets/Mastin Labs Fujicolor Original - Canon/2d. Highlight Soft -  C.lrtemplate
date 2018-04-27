@@ -1,0 +1,16 @@
+s = {
+	id = "B7F8663D-CD02-4FAC-B1EE-BE41B6EF1F33",
+	internalName = "2d. Highlight Soft -  C",
+	title = "2d. Highlight Soft -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -90,
+			ProcessVersion = "10.0",
+			Shadows2012 = 29,
+			Whites2012 = -88,
+		},
+		uuid = "7DDAF321-AE41-408E-863F-8EDAC62733E3",
+	},
+	version = 0,
+}

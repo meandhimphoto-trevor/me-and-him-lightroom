@@ -1,0 +1,16 @@
+s = {
+	id = "1CC16A75-2060-44AB-99F7-D91E6311D3BF",
+	internalName = "2c. Highlight Hard - F ",
+	title = "2c. Highlight Hard - F ",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -25,
+			ProcessVersion = "10.0",
+			Shadows2012 = 29,
+			Whites2012 = -31,
+		},
+		uuid = "604F4AC4-49A0-4883-84C6-5423476D3795",
+	},
+	version = 0,
+}

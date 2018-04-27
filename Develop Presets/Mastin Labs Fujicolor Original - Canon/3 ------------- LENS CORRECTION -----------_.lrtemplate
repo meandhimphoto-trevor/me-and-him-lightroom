@@ -1,0 +1,13 @@
+s = {
+	id = "19C04F73-266C-4F12-A90F-14A135A2F2ED",
+	internalName = "3 ------------- LENS CORRECTION ----------- ",
+	title = "3 ------------- LENS CORRECTION ----------- ",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "10.0",
+		},
+		uuid = "F792098F-7A58-428C-94E4-51D78D77FA0E",
+	},
+	version = 0,
+}

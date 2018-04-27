@@ -1,0 +1,16 @@
+s = {
+	id = "38C33578-33E7-4E77-B6E6-5CD65BA67335",
+	internalName = "2e. Shadow Hard -  C",
+	title = "2e. Shadow Hard -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -63,
+			ProcessVersion = "10.0",
+			Shadows2012 = -4,
+			Whites2012 = -53,
+		},
+		uuid = "59E87DBD-E7C1-4DD3-B06E-AF468074F143",
+	},
+	version = 0,
+}

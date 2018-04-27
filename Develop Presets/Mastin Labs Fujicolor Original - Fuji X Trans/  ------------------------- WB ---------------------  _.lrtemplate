@@ -1,0 +1,13 @@
+s = {
+	id = "B95B39B0-953B-479C-BA0D-840734282706",
+	internalName = "  ------------------------- WB ---------------------   ",
+	title = "  ------------------------- WB ---------------------   ",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "10.0",
+		},
+		uuid = "C18C783B-126E-4DE6-A921-A510A8DBBE58",
+	},
+	version = 0,
+}

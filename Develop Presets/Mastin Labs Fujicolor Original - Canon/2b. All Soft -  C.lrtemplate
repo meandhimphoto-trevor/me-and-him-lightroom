@@ -1,0 +1,16 @@
+s = {
+	id = "AD1247E1-844F-41FF-8696-D4666E8EF50E",
+	internalName = "2b. All Soft -  C",
+	title = "2b. All Soft -  C",
+	type = "Develop",
+	value = {
+		settings = {
+			Highlights2012 = -90,
+			ProcessVersion = "10.0",
+			Shadows2012 = 40,
+			Whites2012 = -88,
+		},
+		uuid = "21B0CAF5-A181-476E-A016-9A7B56127B08",
+	},
+	version = 0,
+}

@@ -1,0 +1,16 @@
+s = {
+	id = "66AB9064-58BA-40D5-9D38-45DD6D2B8EA9",
+	internalName = " ☁️ Cloudy",
+	title = " ☁️ Cloudy",
+	type = "Develop",
+	value = {
+		settings = {
+			ProcessVersion = "10.0",
+			Temperature = 6500,
+			Tint = 0,
+			WhiteBalance = "Custom",
+		},
+		uuid = "67D6397E-FEAD-47B5-AD97-A3E0EA039301",
+	},
+	version = 0,
+}

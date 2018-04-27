@@ -1,0 +1,17 @@
+s = {
+	id = "00908152-217B-495F-A8F2-03FD9CEDC570",
+	internalName = "4a. 35mm Grain - F ",
+	title = "4a. 35mm Grain - F ",
+	type = "Develop",
+	value = {
+		settings = {
+			EnableEffects = true,
+			GrainAmount = 28,
+			GrainFrequency = 45,
+			GrainSize = 40,
+			ProcessVersion = "10.0",
+		},
+		uuid = "20719724-515D-493A-8ED7-7D106A10893E",
+	},
+	version = 0,
+}
