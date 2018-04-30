@@ -1,0 +1,12 @@
+s = {
+   id = "6C6D3EE1-5B61-4F7B-87FB-C8FBEA83F15C",
+   internalName = "Exposure X3",
+   title = "Exposure X3",
+   type = "ExternalEditor",
+   value = {
+      externalEditingFormat = "TIFF_None_16_ProPhotoRGB",
+      externalEditingFormat_dpi = 240,
+      externalEditorFullPath  = "/Applications/Alien Skin Exposure X3.app",
+   },
+   version = 0,
+}
