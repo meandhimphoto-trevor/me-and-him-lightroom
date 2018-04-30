@@ -9,7 +9,11 @@ return {
 	LrPluginName = "Loupedeck",
 
   	LrInitPlugin = "InitPlugin.lua" ,
+  	LrShutdownPlugin = "ShutdownPlugin.lua",
   	LrShutdownApp = "ShutdownApp.lua",
+
+  	LrEnablePlugin = "EnablePlugin.lua",
+  	LrDisablePlugin = "DisablePlugin.lua",
 
   	LrForceInitPlugin = true,
 
@@ -19,7 +23,7 @@ return {
 		file = "VersionInfoMenuItem.lua",
 	},
 
-	VERSION = { major=1, minor=3, revision=0, build=191},
+	VERSION = { major=1, minor=5, revision=1, build=201 },
 }
 
 

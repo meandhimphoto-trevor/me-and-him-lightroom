@@ -1,8 +1,6 @@
-
-
 local LrLogger = import 'LrLogger'
 local logger = LrLogger('loupedeckPlugin')
--- logger:enable("logfile")
+--logger:enable("logfile")
 logger:disable()
 
 
@@ -16,13 +14,15 @@ return {
 
     logger:trace('ShutdownApp: Going to close sockets')
     
-    LOUPEDECK.RSOCKET:close()
-     logger:trace('ShutdownApp: RSOCKET closed')
-
-    if LOUPEDECK.SSOCKET_EXIST then
-      LOUPEDECK.SSOCKET:close()
-      logger:trace('ShutdownApp: SSOCKET closed')
+    if LOUPEDECK.RECEIVESOCKET_CONNECTED then
+    LOUPEDECK.RECEIVESOCKET:close()
     end
+    logger:trace('ShutdownApp: RECEIVESOCKET closed')
+
+    if LOUPEDECK.SENDSOCKET_CONNECTED then
+        LOUPEDECK.SENDSOCKET:close()
+    end
+    logger:trace('ShutdownApp: SENDSOCKET closed')
 
     progressFunction(0.5, "doing things")
 

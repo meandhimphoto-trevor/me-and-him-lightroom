@@ -10,8 +10,13 @@ local logger = LrLogger('loupedeckPlugin')
 logger:disable()
 --logger:enable( "logfile" )
 
-local RECEIVE_PORT     = 23515
-local SEND_PORT        = 23516
+local RECEIVE_PORT     = { 23515, 23517, 23519, 23529, 23549 }
+local SEND_PORT        = { 23516, 23518, 23520, 23530, 23550 }
+
+local SENDINDEX = 1
+local RECEIVEINDEX = 1
+
+local TRIES = 0
 
 PING_MESSAGE = "0"
 
@@ -19,7 +24,7 @@ require 'Methods'
 
 -- Global Variables
 JSON = loadfile(LrPathUtils.child(_PLUGIN.path, 'JSON.lua'))()
-LOUPEDECK = {RSOCKET = {}, SSOCKET = {}, plugin_running = true, RSOCKET_CONNECTED = false, SSOCKET_EXIST = false, KEYBOARD_DISCONNECTED_EVENT = false}
+LOUPEDECK = {RECEIVESOCKET = {}, SENDSOCKET = {}, plugin_running = true, RECEIVESOCKET_CONNECTED = false, SENDSOCKET_CONNECTED = false}
 
 logger:trace('Init: Loupedeck plugin is loading..')
 
@@ -27,117 +32,166 @@ logger:trace('Init: Loupedeck plugin is loading..')
 LrTasks.startAsyncTask( function()
   LrFunctionContext.callWithContext( 'socket_remote', function( context )
 
-    local function startServerSocket(context)
+    local function startSendSocket(context)
+
+      logger:trace("startSendSocket: "..SEND_PORT[SENDINDEX])
+      TRIES = TRIES + 1
       
-      LOUPEDECK.SSOCKET = LrSocket.bind  --- CREATE SOCKET FOR SENDING
+      LOUPEDECK.SENDSOCKET = LrSocket.bind  --- CREATE SOCKET FOR SENDING
       {
         functionContext = context,
-        port = SEND_PORT,
+        port = SEND_PORT[SENDINDEX],
         plugin = _PLUGIN,
         mode = "send",
 
         onConnected = function( socket, port )
           logger:trace('Send Socket Connection established')
-          LOUPEDECK.SSOCKET_EXISTS = true  
+
+          LOUPEDECK.SENDSOCKET_CONNECTED = true
+
+          TRIES = 0
+
+          --showNotification("WELCOME")
         end,
         
         onClosed = function( socket )  
-          logger:trace('Send Socket closed')
-          LOUPEDECK.SSOCKET_EXISTS = false              
+          logger:trace('Send Socket closed')  
+          LOUPEDECK.SENDSOCKET_CONNECTED = false
         end,
 
         onError = function( socket, err )
+          LOUPEDECK.SENDSOCKET_CONNECTED = false
+
           if err == "timeout" then
-            logger:trace('Send Socket Error Timeout')
-            socket:reconnect()
+            logger:trace('Send Socket Error Timeout '..SEND_PORT[SENDINDEX])
+            --socket:reconnect()
+            startSendSocket(context)
 
             return
           end
 
           logger:trace("Failed with error: "..err)
-          if string.sub(err,1,string.len("failed to open")) == "failed to open" then
-            import 'LrDialogs'.showError("Loupedeck needs access to tcp ports 23515 and 23516.\n\nOther process is currently occupying 23516.\n\nLoupedeck will not work until that application is closed.")
+          if string.sub(err,1,string.len("failed to open")) == "failed to open" and TRIES == 5 then
+            import 'LrDialogs'.showError("Loupedeck needs access to tcp ports, but failed to make a connection.")
+            logger:trace("All send ports tried. Failed.")
+
+            TRIES = 0
+
+            return
           end
 
-          LOUPEDECK.RSOCKET:close()
+          logger:trace('Send socket reconnect to '..SEND_PORT[SENDINDEX])
+
+          SENDINDEX = SENDINDEX == 5 and 1 or SENDINDEX + 1
+          
+          startSendSocket(context)
+          --socket:reconnect()
+
+          --LOUPEDECK.RECEIVESOCKET:close()
         end,
       }
 
       logger:trace('Send Socket loaded')
-      LOUPEDECK.SSOCKET_EXIST = true
     end -- end startServerSocket()
 
-    LOUPEDECK.RSOCKET = LrSocket.bind 
-    {
-      functionContext = context,
-      port = RECEIVE_PORT,
-      plugin = _PLUGIN,
-      mode = "receive",
+    local function startReceiveSocket(context)
 
-      onConnected = function( socket, port )        
-         logger:trace('Receive Socket Connection established')
-         LOUPEDECK.RSOCKET_CONNECTED = true
-         
-         -- Initialize rating mode
-         if(RATINGS.mode == nil) then toggleRatingMode() end
-         
-         showNotification("WELCOME")
+      logger:trace("startReceiveSocket: "..RECEIVE_PORT[RECEIVEINDEX])
+      TRIES = TRIES + 1
 
-         LrDevelopController.revealAdjustedControls( true )
-         startServerSocket(context)
-      end,
+      LOUPEDECK.RECEIVESOCKET = LrSocket.bind 
+      {
+        functionContext = context,
+        port = RECEIVE_PORT[RECEIVEINDEX],
+        plugin = _PLUGIN,
+        mode = "receive",
 
-      onMessage = function( socket, message )
+        onConnected = function( socket, port )        
+           logger:trace('Receive Socket Connection established')
+           LOUPEDECK.RECEIVESOCKET_CONNECTED = true
+           
+           -- Initialize rating mode
+           if(RATINGS.mode == nil) then toggleRatingMode() end
 
-        if message == PING_MESSAGE then 
-          return true
-        end
+           RECEIVEINDEX = 1
 
-        --LrTasks.startAsyncTask(function()
-        LrTasks.startAsyncTaskWithoutErrorHandler(function ()
-          local photo = LrApplication.activeCatalog():getTargetPhoto()
-    
-          if( photo ~= nil and photo ~= CurrentPhoto.photo) then 
-            changeCurrentPhoto(photo) 
+           TRIES = 0
+           
+           --showNotification("WELCOME")
+
+           LrDevelopController.revealAdjustedControls( true )
+           startSendSocket(context)
+        end,
+
+        onMessage = function( socket, message )
+
+          logger:trace("Received message: "..message)
+
+          if message == PING_MESSAGE then 
+            return true
           end
 
-          local msg = JSON:decode(message)
-        
-          METHODS[msg.method](msg.property, msg.value)
-        end, "MethodHandler")
-        
-      end,
+          --LrTasks.startAsyncTask(function()
+          LrTasks.startAsyncTaskWithoutErrorHandler(function ()
+            local photo = LrApplication.activeCatalog():getTargetPhoto()
+      
+            if( photo ~= nil and photo ~= CurrentPhoto.photo) then 
+              changeCurrentPhoto(photo) 
+            end
 
-      onClosed = function( socket )
-        if LOUPEDECK.RSOCKET_CONNECTED then
-          logger:trace('Receive Socket reconnected')
-          socket:reconnect()
+            local msg = JSON:decode(message)
+          
+            METHODS[msg.method](msg.property, msg.value)
+          end, "MethodHandler")
+          
+        end,
 
-          if LOUPEDECK.SSOCKET_EXIST then
-            logger:trace('Receive Socket ask SSOCKET to close')
-            LOUPEDECK.SSOCKET:close()
+        onClosed = function( socket )
+          if LOUPEDECK.RECEIVESOCKET_CONNECTED then
+            logger:trace('Receive Socket ask SENDSOCKET to close')
+            LOUPEDECK.SENDSOCKET:close()
+
+            logger:trace('Receive Socket reconnected')
+            socket:reconnect()
+
           end
-        end
-        logger:trace('Receive Socket onClosed end --> LOUPEDECK.RSOCKET_CONNECTED  = false')
-        LOUPEDECK.RSOCKET_CONNECTED = false 
-      end,
 
-      onError = function( socket, err )
-        LOUPEDECK.RSOCKET_CONNECTED = false 
-        if err == "timeout" then
-          logger:trace('Receive Socket Error Timeout')
-          socket:reconnect()
-        end
+          logger:trace('Receive Socket onClosed end --> LOUPEDECK.RECEIVESOCKET_CONNECTED  = false')
+          LOUPEDECK.RECEIVESOCKET_CONNECTED = false 
+        end,
 
-        logger:trace("Failed with error: "..err)
+        onError = function( socket, err )
+          LOUPEDECK.RECEIVESOCKET_CONNECTED = false 
+          if err == "timeout" then
+            logger:trace('Receive Socket Error Timeout '..RECEIVE_PORT[RECEIVEINDEX])
+            socket:reconnect()
+            return
+          end 
 
-        if string.sub(err,1,string.len("failed to open")) == "failed to open" then
-          import 'LrDialogs'.showError("Loupedeck needs access to tcp ports 23515 and 23516.\n\nOther process is currently occupying 23515.\n\nLoupedeck will not work until that application is closed.")
-        end
-      end,
-    }  -- end of LrSocket.bind 
- 
+          logger:trace("Failed with error: "..err)
+
+          if string.sub(err,1,string.len("failed to open")) == "failed to open" and TRIES == 5 then
+            import 'LrDialogs'.showError("Loupedeck needs access to tcp ports, but failed to make a connection.")
+            logger:trace("All receive ports tried. Failed.")
+
+            TRIES = 0
+
+            return
+          end
+
+          RECEIVEINDEX = RECEIVEINDEX == 5 and 1 or RECEIVEINDEX + 1
+
+          logger:trace('Receive socket reconnect to '..RECEIVE_PORT[RECEIVEINDEX])
+          startReceiveSocket(context)
+
+          --socket:reconnect()
+
+        end,
+      }  -- end of LrSocket.bind 
+      end -- end of startReceiveSocket
+
     logger:trace('Receive Socket loaded')
+    startReceiveSocket(context)
 
     while LOUPEDECK.plugin_running  do
       LrTasks.sleep( 1/2 ) -- seconds
